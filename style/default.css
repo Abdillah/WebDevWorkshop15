@@ -20,3 +20,129 @@ nav > ul > li {
 p + img {
 	border: 4px solid #fff;
 }
+
+/*
+ * Drop Down Menu
+ * Credit : Hamdan Prakoso
+ */
+
+nav {
+	/* Atur posisi menu terhadap halaman */
+	text-align: right;
+}
+
+ul {
+	text-align: left;
+
+	/* Buat element sejajar */
+	display: inline;
+
+	/* Atur spasi antar elemen dan konten */
+	margin: 0;
+	padding: 15px 4px;
+
+	/* Hilangkan point dalam list */
+	list-style: none;
+
+	border: 2px solid #ccc;
+
+	/* Buat shadow di sekitar menu*/
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+ul li {
+	display: inline-block;
+	position: relative;
+	padding: 13px 20px;
+
+    cursor: pointer;
+
+	background: #fff;
+
+	/* weight | size/line-height | family */
+	font: bold 12px/18px sans-serif;
+	/* sama seperti */
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 18px;
+	font-family: sans-serif;
+
+	/* Aktifkan transisi style */
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+/* Sewaktu cursor mengambang di atas elemen, pakai style berikut */
+ul li:hover {
+	background: #eee;
+	color: #000;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul li ul {
+	/* Sembunyikan submenu dulu */
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+
+	/* Atur posisi penampilan submenu */
+	position: absolute;
+	top: 44px;
+	left: 0;
+
+	padding: 0;
+	width: 150px;
+
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+
+	/* Atur durasi perubahan pada saat penampilan submenu */
+	-webkit-transiton: opacity 0.2s;
+	-moz-transition: opacity 0.2s;
+	-ms-transition: opacity 0.2s;
+	-o-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+}
+
+ul li ul li {
+	display: block;
+
+	background: #555;
+	color: #fff;
+	text-shadow: 0 -1px 0 #000;
+
+	/* Buat garis pemisah submenu */
+	border-bottom: 1px solid #e0e7e7;
+}
+
+ul li ul li a {
+	color: #929;
+}
+
+/* ... Quiz */
+ul li ul li:last-child {
+	border-bottom: 0px;
+}
+
+ul li ul li:hover {
+	background: #666;
+	color: #fff;
+}
+
+ul li:hover ul {
+	display: block;
+	opacity: 1;
+
+	/* Munculkan submenu ketika menu item di hover */
+	visibility: visible;
+}
